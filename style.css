@@ -89,16 +89,13 @@ h2 {
     flex-shrink: 0;
 }
 
-.image-placeholder {
+.portrait {
     width: 200px;
     height: 250px;
-    background-color: #e9ecef;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-size: 18px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .contact-info {
@@ -111,6 +108,18 @@ h2 {
     line-height: 1.8;
 }
 
+.visitor-card {
+    margin-top: 24px;
+    width: fit-content;
+}
+
+.visitor-card img {
+    display: block;
+    width: 280px;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
 /* 个人简介 */
 .bio {
     margin-top: 30px;
@@ -119,6 +128,15 @@ h2 {
 
 .bio p {
     margin-bottom: 15px;
+}
+
+.bio a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.bio a:hover {
+    text-decoration: underline;
 }
 
 /* 页脚 */
