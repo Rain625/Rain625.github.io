@@ -18,6 +18,30 @@ body {
     padding: 0 20px;
 }
 
+.top-nav {
+    border-bottom: 1px solid #e7e7e7;
+    background: #fff;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    height: 42px;
+    font-size: 14px;
+}
+
+.nav-inner a {
+    color: #555;
+    text-decoration: none;
+}
+
+.nav-inner a:hover,
+.nav-brand {
+    color: #222;
+    font-weight: 600;
+}
+
 /* 主要内容区域 */
 main {
     min-height: calc(100vh - 150px);
@@ -25,20 +49,21 @@ main {
 
 .page-layout {
     display: grid;
-    grid-template-columns: 190px 1fr;
-    gap: 56px;
-    padding-top: 36px;
+    grid-template-columns: 180px 1fr;
+    gap: 68px;
+    padding-top: 38px;
     padding-bottom: 60px;
 }
 
 .profile-sidebar {
     color: #333;
     font-size: 14px;
+    padding-top: 6px;
 }
 
 .profile-sidebar h1 {
-    font-size: 1.4em;
-    margin: 16px 0 8px;
+    font-size: 1.35em;
+    margin: 14px 0 4px;
     color: #2c3e50;
 }
 
@@ -46,9 +71,33 @@ main {
     margin-bottom: 12px;
 }
 
-.subtitle {
-    font-size: 1em;
-    color: #666;
+.lab-line {
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.sidebar-bio {
+    color: #444;
+    line-height: 1.55;
+}
+
+.profile-links {
+    list-style: none;
+    margin-top: 18px;
+}
+
+.profile-links li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.profile-icon {
+    width: 16px;
+    flex: 0 0 16px;
+    color: #333;
+    text-align: center;
 }
 
 .profile-sidebar a,
@@ -62,12 +111,27 @@ main {
     text-decoration: underline;
 }
 
-.about-content h2 {
-    font-size: 1.8em;
-    margin-bottom: 18px;
+.content-column {
+    padding-top: 2px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.55em;
+    margin-bottom: 14px;
     color: #2c3e50;
     border-bottom: 1px solid #e7e7e7;
     padding-bottom: 8px;
+}
+
+.section-icon {
+    font-size: 0.95em;
 }
 
 /* 个人资料 */
@@ -80,19 +144,6 @@ main {
     object-position: center top;
 }
 
-/* 底部浏览图 */
-.visitor-card {
-    width: fit-content;
-    margin: 0 auto 14px;
-}
-
-.visitor-card img {
-    display: block;
-    width: 280px;
-    max-width: 100%;
-    border-radius: 4px;
-}
-
 /* 个人简介 */
 .bio {
     line-height: 1.8;
@@ -102,18 +153,44 @@ main {
     margin-bottom: 15px;
 }
 
+.news-list {
+    padding-left: 22px;
+}
+
+.news-list li {
+    margin-bottom: 8px;
+}
+
 /* 页脚 */
 footer {
     background-color: #f8f9fa;
     text-align: center;
-    padding: 20px;
+    padding: 22px 20px;
     border-top: 1px solid #e7e7e7;
     color: #666;
     font-size: 14px;
 }
 
+.visitor-widget {
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+.visitor-widget img,
+.visitor-widget canvas,
+.visitor-widget iframe {
+    max-width: 100%;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .nav-inner {
+        justify-content: center;
+        gap: 22px;
+    }
+
     .page-layout {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -128,7 +205,7 @@ footer {
         margin: 0 auto;
     }
 
-    .about-content h2 {
+    .content-section h2 {
         font-size: 1.5em;
     }
 }
